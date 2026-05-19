@@ -55,7 +55,7 @@ echo '{"year":1990,"month":6,"day":15,"hour":14,"minute":30,"gender":"male"}' | 
 $env:PYTHONIOENCODING = 'utf-8'
 $inputJson = '{"year":1990,"month":6,"day":15,"hour":14,"minute":30,"gender":"male"}'
 $inputJson | Set-Content -Path bazi_input.json -Encoding utf8
-$output = python "C:\Users\HUAN YIQUN\.claude\skills\bazi\scripts\bazi_calculator.py" --file bazi_input.json 2>&1
+$output = python scripts/bazi_calculator.py --file bazi_input.json 2>&1
 $output | Out-File -FilePath bazi_output.json -Encoding utf8
 ```
 
